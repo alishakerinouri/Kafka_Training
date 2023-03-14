@@ -1,0 +1,119 @@
+Linux:
+#################################
+#### DOWNLOAD KAFKA BINARIES ####
+#################################
+
+# Download Kafka at https://kafka.apache.org/downloads
+
+# Extract Kafka
+tar -xvf kafka_2.12-2.0.0.tgz
+
+# Open the Kafka directory
+cd kafka_2.12-2.0.0
+
+# this should show JDK 8
+java -version 
+
+# Otherwise Install Java JDK 8 (must be 8!)
+sudo apt install openjdk-8-jdk
+
+# Verify Java 8
+java -version
+
+# Try out a Kafka command
+bin/kafka-topics.sh
+
+# Edit .profile
+nano ~/.profile
+# Add PATH="$PATH:/your/path/to/your/kafka/bin"
+nano ~/.bashrc
+# Add at the bottom:
+# . ~/.profile
+
+# Open a new terminal
+# Try running the command from any directory:
+kafka-topics.sh
+
+MacOS:
+#################################
+#### DOWNLOAD KAFKA BINARIES ####
+#################################
+
+# Download Kafka at https://kafka.apache.org/downloads
+
+# Extract Kafka
+tar -xvf kafka_2.12-2.0.0.tgz
+
+# Open the Kafka directory
+cd kafka_2.12-2.0.0
+
+# this should show JDK 8
+java -version 
+
+# Try brew
+brew
+
+# Install brew if needed:
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install Java 8 if needed
+brew tap caskroom/versions
+brew cask install java8
+
+# Verify Java 8
+java -version
+
+# Try out a Kafka command
+bin/kafka-topics.sh
+
+# Edit .bash_profile
+nano ~/.bash_profile
+# Add PATH="$PATH:/your/path/to/your/kafka/bin"
+
+# Open a new terminal
+# Try running the command from any directory:
+kafka-topics.sh
+
+####################
+#### USING BREW ####
+####################
+
+# Edit .bash_profile
+nano ~/.bash_profile
+# remove the previously added line PATH="$PATH:/your/path/to/your/kafka/bin"
+
+# Install kafka using brew
+brew install kafka
+
+# Open a new terminal
+# Try a kafka command:
+kafka-topics
+
+Windows:
+#################################
+#### DOWNLOAD KAFKA BINARIES ####
+#################################
+
+# Download Kafka at https://kafka.apache.org/downloads
+
+# Extract Kafka using 7Zip or WinRAR
+# https://www.7-zip.org/
+
+# Place at C:\kafka_2.12-2.0.0
+
+# Install Java 8 JDK:
+# http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+# Open a command line
+# this should show JDK 8
+java -version 
+
+# Try out a Kafka command
+bin\windows\kafka-topics.bat
+
+# Edit your environment variables and add to PATH
+C:\kafka_2.12-2.0.0\bin\windows
+
+# Open a new terminal
+# Try running the command from any directory:
+kafka-topics.bat
